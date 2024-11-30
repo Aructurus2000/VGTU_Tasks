@@ -3,11 +3,14 @@ import { TextField } from '../../components';
 import { Button } from '../../components';
 import {WidgetLayout} from "../../components/layots";
 import './loginPageStyle.scss'
+import {useNavigate} from "react-router-dom";
+import {RoutesPaths} from "../../constants/commonConstants";
 
 
 export const LoginPage: FC = () => {
     const [login, setLogin] = useState<string>('');
     const [password, setPassword] = useState<string>('');
+    const navigate = useNavigate();
 
     const loginChangedHandler = (value: string) => {
         setLogin(value);
@@ -25,7 +28,7 @@ export const LoginPage: FC = () => {
     }
 
     const toRegistrationHandler = () => {
-
+        navigate(RoutesPaths.Registration);
     };
 
     return (
@@ -37,8 +40,8 @@ export const LoginPage: FC = () => {
                     <TextField labelText="Пароль" value={password} type="password" onChange={passwordChangedHandler} />
                 </div>
                 <div className="login-page__actions">
-                <Button text="Войти" onClick={loginHandler} type="primary" />
-                <Button text="Зарегистрироваться" onClick={toRegistrationHandler} type="secondary" />
+                    <Button text="Войти" onClick={loginHandler} type="primary" />
+                    <Button text="Зарегистрироваться" onClick={toRegistrationHandler} type="secondary" />
                 </div>
             </div>
         </WidgetLayout>

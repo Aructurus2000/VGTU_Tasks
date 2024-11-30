@@ -1,10 +1,16 @@
 import React from 'react';
+import { Route, Routes } from 'react-router-dom';
 import { LoginPage } from './pages';
+import { RegistrationPage } from './pages/registration/RegistrationPage';
+import { RoutesPaths } from './constants/commonConstants';
 
 export const App: React.FC = () => {
-  return (<div>
-    
-    <LoginPage />
-    
-    </div>);
+  return (
+      <Routes>
+        <Route path={RoutesPaths.Login} element={<LoginPage />} />
+        <Route path={RoutesPaths.Registration} element={<RegistrationPage />} />
+        <Route path={'*'} element={<LoginPage />} />
+      </Routes>
+  );
 }
+
