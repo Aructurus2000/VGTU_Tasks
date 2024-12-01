@@ -8,12 +8,12 @@ interface IconProps {
     onClick?: () => void;
 }
 
-export const LogoIcon: FC<IconProps> = props => {
+export const UserIcon: FC<IconProps> = props => {
     const {
         className,
         color = '#ffffff',
-        height = 40,
-        width = 40,
+        height = 24,
+        width = 24,
         onClick
     } = props;
 
@@ -24,7 +24,9 @@ export const LogoIcon: FC<IconProps> = props => {
              viewBox="0 0 24 24"
              fill="none"
              xmlns="http://www.w3.org/2000/svg">
-            <path d="M4 17H8M12 17H20M4 12H20M4 7H12M16 7H20" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            <circle cx="12" cy="9" r="3" stroke={color} strokeWidth="1.5"/>
+            <circle cx="12" cy="12" r="10" stroke={color} strokeWidth="1.5"/>
+            <path d="M17.9691 20C17.81 17.1085 16.9247 15 11.9999 15C7.07521 15 6.18991 17.1085 6.03076 20" stroke={color} strokeWidth="1.5" strokeLinecap="round"/>
         </svg>
     );
 }
