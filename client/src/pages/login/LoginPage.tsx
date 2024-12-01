@@ -1,10 +1,10 @@
 import { FC, useState } from 'react';
 import { TextField } from '../../components';
 import { Button } from '../../components';
-import {WidgetLayout} from "../../components/layots";
+import {WidgetLayout} from '../../components/layouts';
 import './loginPageStyle.scss'
-import {useNavigate} from "react-router-dom";
-import {RoutesPaths} from "../../constants/commonConstants";
+import {useNavigate} from 'react-router-dom';
+import {RoutesPaths} from '../../constants/commonConstants';
 
 
 export const LoginPage: FC = () => {
@@ -25,6 +25,7 @@ export const LoginPage: FC = () => {
             login,
             password
         });
+        navigate(RoutesPaths.Departments)
     }
 
     const toRegistrationHandler = () => {
