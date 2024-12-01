@@ -1,7 +1,7 @@
 import { FC, useState } from 'react';
 import { TextField } from '../../components';
 import { Button } from '../../components';
-import {WidgetLayout} from "../../components/layots";
+import {WidgetLayout} from "../../components/layouts";
 import './registrationPageStyles.scss'
 import {useNavigate} from "react-router-dom";
 import {RoutesPaths} from "../../constants/commonConstants";
@@ -30,10 +30,13 @@ export const RegistrationPage: FC = () => {
         })
     };
 
-    const goToLogin = () => {
-        navigate(RoutesPaths.Login);
+    const registrationHandler = () => {
+        navigate(RoutesPaths.Departments);
     }
 
+    const goToLogin = () => {
+        navigate(RoutesPaths.Login);
+    };
 
 
     return (
@@ -49,7 +52,7 @@ export const RegistrationPage: FC = () => {
                     <TextField labelText="Отчество" value={formFields?.midName} type="text" onChange={(value) => changeFieldValue(value, 'login')} />
                 </div>
                 <div className="reg-page__actions">
-                    <Button text="Зарегистрироваться" onClick={()=>{}} type="primary" />
+                    <Button text="Зарегистрироваться" onClick={registrationHandler} type="primary" />
                     <Button text="Войти" onClick={goToLogin} type="secondary" />
                 </div>
             </div>
