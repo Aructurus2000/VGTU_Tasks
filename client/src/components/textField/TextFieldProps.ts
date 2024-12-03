@@ -1,7 +1,7 @@
+import { LabelWeight } from "../../types/commonTypes";
 import React from "react";
 
 type InfoType = 'info' | 'error' | 'success';
-type LabelWeight = 'normal' | 'strong';
 
 export interface TextFieldProps {
     labelText?: string;
@@ -11,4 +11,4 @@ export interface TextFieldProps {
     value?: string;
     onChange?: (value: string) => void;
     lblWeight?: LabelWeight;
-};
+}
