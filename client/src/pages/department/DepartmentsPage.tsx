@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { Layout } from '../../components/layouts';
-import { DropDown } from '../../components';
+import {Button, DropDown} from '../../components';
 import { EmployeesList } from '../../components';
 import './departmentsPageStyles.scss'
 
@@ -26,6 +26,7 @@ export const DepartmentsPage: FC = () => {
                         { id: 4, lastName: 'Рябчикова', firstName: 'Лидия', midleName: 'Анатольевич' },
                         { id: 5, lastName: 'Семенов', firstName: 'Олег', midleName: 'Артемович' },
                     ]} />
+                    <Button text="Добавить сотрудника" className="dep-page__add-user-btn"/>
                 </div>
                 <div>
                     <div>

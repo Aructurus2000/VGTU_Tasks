@@ -2,6 +2,7 @@ import { FC, useState } from 'react';
 import { EmployeesListProps } from './EmployeesListProps';
 import './employeesListStyles.scss'
 import clsx from 'classnames';
+import {PencilIcon, TrashIcon} from "../../assets/icons"
 
 
 export const EmployeesList: FC<EmployeesListProps> = props => {
@@ -23,7 +24,13 @@ export const EmployeesList: FC<EmployeesListProps> = props => {
                          className={clsx('empl-list__item', {'empl-list__item_selected': isSelected(user.id)})}
                          onClick={() => employeeClickHandler(user.id)}
                     >
-                        {`${user.lastName} ${user.firstName} ${user.midleName ?? ''}`.trim()}
+                        <div className="empl-list__item_fio">
+                            {`${user.lastName} ${user.firstName} ${user.midleName ?? ''}`.trim()}
+                        </div>
+                        <div className="empl-list__item_actions">
+                            <PencilIcon width={18} height={18}/>
+                            <TrashIcon width={18} height={18}/>
+                        </div>
                     </div>
                 );
             })}
