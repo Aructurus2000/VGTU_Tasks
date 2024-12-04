@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { Layout } from '../../components/layouts';
 import { DropDown } from '../../components';
-import { EmployeesList } from "../../components/employeesList";
+import { EmployeesList } from '../../components';
 import './departmentsPageStyles.scss'
 
 export const DepartmentsPage: FC = () => {

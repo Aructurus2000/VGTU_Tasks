@@ -1,4 +1,4 @@
-@import '../../styles/variables.scss';
+@import '../../styles/variables';
 
 .dep-page {
   width: 100%;
@@ -14,6 +14,6 @@
     padding: 0 10px 0 0;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 30px;
   }
 }
