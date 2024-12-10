@@ -50,6 +50,7 @@ export const DepartmentsPage: FC = () => {
    useEffect(() => {
        const selectedDepartment = departmentsData.find(d => d.id === selectedDepartmentId);
        setEmployeesData(selectedDepartment ? selectedDepartment.employees : []);
+       setSelectedEmployeeId(undefined);
    }, [departmentsData, selectedDepartmentId]);
 
     useEffect(() => {
